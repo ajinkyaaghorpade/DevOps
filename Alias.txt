@@ -1,0 +1,36 @@
+*****************Alias***************
+
+
+alias l="ls -ltrh"
+alias p="pwd"
+
+alias -p (list of alias)
+
+alias backup="tar -cvzf"
+
+backup agatsya_backup.tar.gz agastya/
+(backup is the alias then gzip file name and then directory name")
+
+alias dir="cd /home/ajinkya/agastya"
+
+this alias have only work for temporary, once you logged out the server, it will gone.
+
+if you want this alias as a permanant then follow below steps
+
+--> ls -la
+
+--> you will find .bashrc
+
+--> vi .bashrc
+
+enter below lines in end of the file
+
+#User specific aliases and functions
+alias aju="cd /home/ajinkya/agastya"
+alias run="./06_key_value_pairs.sh"
+
+--> wq!
+
+--> source .bashrc
+
+--> done

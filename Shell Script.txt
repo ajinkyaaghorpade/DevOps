@@ -1,0 +1,81 @@
+
+
+
+Git Token 16 sept 24
+
+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
+
+
+#this is for constant variable
+
+readonly Name="Agastya"
+
+echo "my son name is $Name"
+
+
+#this the just for comment line
+
+
+<<Multiline
+Ajinkya
+Ghorpade
+Tuljapur
+8149303030
+Multiline
+
+
+#this is for using variables
+
+a="28"
+name="Ajinkya"
+age=30
+
+
+#new arrays has been showing
+
+#Arrays
+
+MyArray=( 14 28 90 05.05 "Ajinkya" "Ghorpade" )
+
+
+echo "my lucky number is ${MyArray[1]}"
+
+
+echo "my name is ${MyArray[4]}"
+
+echo "Total number of count of Arrays is ${#MyArray[*]}"
+
+echo "the 4-5 value is ${MyArray[*]:4:2}"
+
+#adding new values in My Array
+
+MyArray+=(Aai TuljaBhavani 100)
+
+echo "new Array values added is ${MyArray[*]}"
+
+
+
+#adding new key value pairs
+
+declare -A MyData
+
+MyData=( [Name]=Ajinkya [Age]=32 [City]=Pune [Office]=TechM )
+
+echo "Hello My name is ${MyData[Name]}"
+echo "My Age is ${MyData[Age]}"
+
+
+
+String Operations (Upper case, Lower case)
+MyProfile=" Hey There, My Name is Ajinkya "
+
+
+profile=${#MyProfile}
+
+echo "Total length of the profile is ---- $profile"
+
+echo "All characters need in Upper Case ----- ${MyProfile^^}"
+
+echo "All characters need in lower case ----- ${MyProfile,,}"
+
+

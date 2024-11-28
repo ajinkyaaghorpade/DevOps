@@ -1,0 +1,19 @@
+**********Hard Links / Soft Links in Linux *******************
+
+
+Hard Links
+
+Soft Links - link will be removed if original file is deleted or removed
+
+ln -s /home/ajinkya/agastya/newfile/demo trial
+
+(ln stand for link, s stand for soft and then mentioned path of the file, and then trial is the link name)
+
+
+Hard Link - deleting, renaming, or removing the original file will not be affect the link
+
+eg.  ln  /home/ajinkya/agastya/newfile/demo hardlinkfile
+
+(ln stand for link, then mentioned path of the file, and then hardlinkfile is the link name)
+
+once you delete the link in hard link it will be not deleted bcz of every time when we create hard link there will be 2 i node files will create.

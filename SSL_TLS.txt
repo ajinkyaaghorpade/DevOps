@@ -1,0 +1,10 @@
+*************SSL / TLS versions ****************
+
+(it is crypto graphic data layer)
+
+SSL - secure socket layer
+TLS - Transport layer security
+
+TLS is the newest version of SSL
+
+in TLS there is 3 parts of it

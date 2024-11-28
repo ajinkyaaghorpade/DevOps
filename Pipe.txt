@@ -1,0 +1,20 @@
+the output of one command redirect it to the input another
+
+ls -1 (line bye line files will show)
+cat sample.txt | sort (it will alphabetically sorts the data)
+cat sample.txt | sort | uniq (it will sort + uniq data)
+
+
+cat random_data.txt | head -50 | tail -10
+(in this command it shows 1st 50 names in that 50 name we want only last 10 names, so in this case this command will use)
+41      Gracelynn Hansen
+42      Irene Faulkner
+43      Isabel Little
+44      Iyla Kim
+45      Jabari Young
+46      Jade Garrison
+47      Jaiden Ayala
+48      Jaxxon Howell
+49      Jones Salinas
+50      Joshua Moon
+

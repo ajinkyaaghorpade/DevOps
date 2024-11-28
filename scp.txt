@@ -1,0 +1,10 @@
+secure copy file
+command
+scp file1 ajinkya@hostname(ip):/tmp(path)
+(it will securly send file to remote server)
+
+now we want a file from remote server to our local server.
+so here's the procedure.
+
+scp ajinkya@remote_server_ip:/path/filename /tmp (/tmp is your local server path)
+

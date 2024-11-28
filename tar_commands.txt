@@ -1,0 +1,46 @@
+*********************File Compressions in Linux ******************************
+
+file compression reduces the sizes of files, by encoding data more efficiently
+
+this is especially useful for backup, storage, and file transfer.
+
+gzip linux_work (for zip) (which is used only for files not directory)
+
+gunzip linux_work (for unzip)
+
+for directory compression (direcory zip)
+
+--> tar (tape archive)
+
+--> tar -cvf (cvf stands for compress,verbose,file) agastya.tar (file name)  agastya/ (directory name)
+
+--> gzip agastya.tar
+
+--> output will be agastya.tar.gz
+(in this directory had cretaed tar first then we gzip it, it used most in IT industry)
+
+
+----Now we do reverse of above files (Decompress of files)
+
+--> 1st create a new directory eg. mkdir test
+
+--> cp  agastya.tar.gz test (we copied agastya tar file in test folder)
+
+--> tar -xvf agastya.tar.zip
+
+--> you want to see the content of tar.gz file thrn use below command
+
+--> tar -tzvf agastya.tar.zip
+
+--> you will get details like below.
+
+ajinkya@LAPTOP-MTU0R4K6:~/testing$ tar -tzvf agastya.tar.gz
+drwxr-xr-x ajinkya/ajinkya   0 2024-08-14 10:18 agastya/
+-rwxr-xr-x ajinkya/ajinkya  98 2024-06-29 10:20 agastya/constant_variable.sh
+-rwxr-xr-x ajinkya/ajinkya 196 2024-07-02 09:32 agastya/06_key_value_pairs.sh
+-rwxr-xr-x ajinkya/ajinkya 378 2024-07-30 10:44 agastya/12_case_demo.sh
+-rwxr-xr-x ajinkya/ajinkya 116 2024-06-29 10:11 agastya/variable_demo.sh
+-rwxr-xr-x ajinkya/ajinkya 246 2024-07-29 09:06 agastya/11_elif_demo.sh
+-rwxr-xr-x ajinkya/ajinkya  33 2024-06-29 10:01 agastya/first_script.sh
+
+

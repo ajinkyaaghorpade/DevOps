@@ -1,0 +1,482 @@
+
+
+sbi.64164@sbi.co.in
+
+***************************Git / Git Hub****************************************
+
+
+git status
+git diff
+git log
+git show (log id:file name)
+eg git show 0a5ade549785442da51b55df4eb3cde5bf6dac5f:index.html(index.html is 1 file name, in production there were multiple files present so it would be better to mention our file name)
+
+
+
+
+To undo changes, get last successful changes
+if u save any content bymistaklly and want to restore back 
+
+git restore .
+or
+git restore file name
+
+
+if we added changes using git add then 
+
+git restore --staged .
+or
+git restore --staged (file name)
+
+then
+git restore .
+or
+git restore filename
+
+
+
+if we update any changes what you want in file and added in staged area, after by mistaklly something u added wrong in file then?
+
+git restore --worktree .
+
+
+
+if u commited changes in  file and u want to revert it back then ?
+
+git reset --hard HEAD^
+
+
+
+to show last commit changes
+
+$ git log -p -1 (-p means patch and -1 last 1 commit)
+
+commit b075aba9f8e9d7198f50663f41d280cd4cc5380b (HEAD -> master)
+Author: ajinkya111122 <nikhil908070@gmail.com>
+Date:   Sun Aug 4 10:33:20 2024 +0530
+
+    this is version v3
+
+diff --git a/index.html b/index.html
+index 72ac226..d065a39 100644
+--- a/index.html
++++ b/index.html
+@@ -6,6 +6,6 @@
+     <title>Document</title>
+
+ajink@LAPTOP-MTU0R4K6 MINGW64 ~/git repo (master)
+$
+
+
+
+
+$ git log --stat (only shows in which file changes has done)
+
+commit b075aba9f8e9d7198f50663f41d280cd4cc5380b (HEAD -> master)
+Author: ajinkya111122 <nikhil908070@gmail.com>
+Date:   Sun Aug 4 10:33:20 2024 +0530
+
+    this is version v3
+
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ 
+ 
+ $ git log --pretty=oneline (shows all commits in 1 line, like id and msg)
+ 
+b075aba9f8e9d7198f50663f41d280cd4cc5380b (HEAD -> master) this is version v3
+0a5ade549785442da51b55df4eb3cde5bf6dac5f this is version v2
+4353ca21e1f21a2e687f57dee1332b2dbc20decb new file has added
+
+
+$ git log --pretty=format:"%h -%-an, %ar:%s"  (shows all details in line format)
+(eg. log id, author name, time, msg)
+
+b075aba -ajinkya111122, 24 hours ago:this is version v3
+0a5ade5 -ajinkya111122, 24 hours ago:this is version v2
+4353ca2 -ajinkya111122, 25 hours ago:new file has added
+
+
+ git log -S V3 (it shows any perticular word when it added)
+ 
+commit b075aba9f8e9d7198f50663f41d280cd4cc5380b (HEAD -> master)
+Author: ajinkya111122 <nikhil908070@gmail.com>
+Date:   Sun Aug 4 10:33:20 2024 +0530
+
+    this is version v3
+	
+	
+Useful log  options
+
+git log --grep="fix bugs"
+git log --author="ajinkya"
+
+
+git token :- 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
+
+
+git remote set-url origin https://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@github.com/ajinkya111122/demo
+
+git clone https://github.com/ajinkya111122/demo.git
+(wherever you want to clone the file just run above clone command)
+
+$ git log -p -1 3081a0eb04fc6e95522d3666ad820dd5fef00bea
+shows the details for above log.
+
+Git Branching / Merging.
+
+
+
+
+*****************Alias***************
+
+
+alias l="ls -ltrh"
+alias p="pwd"
+
+alias -p (list of alias)
+
+alias backup="tar -cvzf"
+
+backup agatsya_backup.tar.gz agastya/
+(backup is the alias then gzip file name and then directory name"
+
+alias dir="cd /home/ajinkya/agastya"
+
+this alias have only work for temporary, once you logged out the server, it will gone.
+
+if you want this alias as a permanant then follow below steps
+
+--> ls -la
+
+--> you will find .bashrc
+
+--> vi .bashrc
+
+enter below lines in end of the file
+
+#User specific aliases and functions
+alias aju="cd /home/ajinkya/agastya"
+alias run="./06_key_value_pairs.sh"
+
+--> wq!
+
+--> source .bashrc
+
+--> done
+
+
+*********API *************
+
+
+Api - Application Programming interface
+
+request --><-- response
+
+responses be like in JSON, XML formats
+
+
+
+**********Hard Links / Soft Links in Linux *******************
+
+
+Hard Links
+
+Soft Links - link will be removed if original file is deleted or removed
+
+ln -s /home/ajinkya/agastya/newfile/demo trial
+
+(ln stand for link, s stand for soft and then mentioned path of the file, and then trial is the link name)
+
+
+Hard Link - deleting, renaming, or removing the original file will not be affect the link
+
+eg.  ln  /home/ajinkya/agastya/newfile/demo hardlinkfile
+
+(ln stand for link, then mentioned path of the file, and then hardlinkfile is the link name)
+
+once you delete the link in hard link it will be not deleted bcz of every time when we create hard link there will be 2 i node files will create.
+
+
+
+
+*****************Linux Envoirment Variables ***************************
+
+
+They are essentially key-value pairs used by the operating system to pass configuration information to applications.
+
+Types of Environment Variables:
+Global (or System-wide): Accessible from any terminal session and by any process.
+Local: Specific to the terminal session, once session logout your env will be lost.
+
+Common Commands:
+printenv: Lists all global environment variables.
+env: Displays global environment variables.
+set: Shows both global and local environment variables.
+echo $VARIABLE_NAME: Displays the value of a specific environment variable.
+
+Setting Environment Variables:
+You can set a variable temporarily in a session using export VARIABLE_NAME=value.
+To set it permanently, you can add the export command to your shell’s configuration file (e.g., .bashrc or .bash_profile).
+
+
+myval="Aagastya Ghorpade" (temp var added)
+to check this echo $myval
+
+to set this permanant
+
+export myval="Agastya Ghorpade"
+
+now check just run env command or printenv
+
+ajinkya@LAPTOP-MTU0R4K6:~$ env | grep myval
+myval=Aagastya Ghorpade
+
+To set env variables permanently for User the follow below steps
+
+go to /.profile for (ubuntu) or /.bash_profile for (CentOS)
+
+add below variable for an example
+
+# user specific env and startup programms
+export VAR="Ajinkya Arunrao Ghorpade"
+
+after saving the above .profile file just run the below command 
+
+--> source ~/.profile
+
+now it will be permanently saved your variable
+
+
+ajinkya@LAPTOP-MTU0R4K6:~$ env | grep VAR
+VAR=Ajinkya Arunrao Ghorpade
+
+(you will findout the env variable)
+
+
+*********************File Compressions in Linux ******************************
+
+file compression reduces the sizes of files, by encoding data more efficiently
+
+this is especially useful for backup, storage, and file transfer.
+
+gzip linux_work (for zip) (which is used only for files not directory)
+
+gunzip linux_work (for unzip)
+
+for directory compression (direcory zip)
+
+--> tar (tape archive)
+
+--> tar -cvf (cvf stands for compress,verbose,file) agastya.tar (file name)  agastya/ (directory name)
+
+--> gzip agastya.tar
+
+--> output will be agastya.tar.gz
+(in this directory had cretaed tar first then we gzip it, it used most in IT industry)
+
+
+----Now we do reverse of above files (Decompress of files)
+
+--> 1st create a new directory eg. mkdir test
+
+--> cp  agastya.tar.gz test (we copied agastya tar file in test folder)
+
+--> tar -xvf agastya.tar.zip
+
+--> you want to see the content of tar.gz file thrn use below command
+
+--> tar -tzvf agastya.tar.zip
+
+--> you will get details like below.
+
+ajinkya@LAPTOP-MTU0R4K6:~/testing$ tar -tzvf agastya.tar.gz
+drwxr-xr-x ajinkya/ajinkya   0 2024-08-14 10:18 agastya/
+-rwxr-xr-x ajinkya/ajinkya  98 2024-06-29 10:20 agastya/constant_variable.sh
+-rwxr-xr-x ajinkya/ajinkya 196 2024-07-02 09:32 agastya/06_key_value_pairs.sh
+-rwxr-xr-x ajinkya/ajinkya 378 2024-07-30 10:44 agastya/12_case_demo.sh
+-rwxr-xr-x ajinkya/ajinkya 116 2024-06-29 10:11 agastya/variable_demo.sh
+-rwxr-xr-x ajinkya/ajinkya 246 2024-07-29 09:06 agastya/11_elif_demo.sh
+-rwxr-xr-x ajinkya/ajinkya  33 2024-06-29 10:01 agastya/first_script.sh
+
+
+
+
+**********************LOG Analysis ****************************
+
+what are logs :- a log file store events, process, messages, and other data from applications, os or devices. which is useful for monitoring.
+
+bootstrap logs :- system reboot logs
+
+shift + g (file end)
+p (start file)
+
+cat logfile | more (printable format log)
+
+grep -i "error" error_log
+
+
+*************SSL / TLS versions ****************
+
+(it is crypto graphic data layer)
+
+SSL - secure socket layer
+TLS - Transport layer security
+
+TLS is the newest version of SSL
+
+in TLS there is 3 parts of it
+
+
+
+****************Cron Job ***********
+
+schedule task is called as cron job.
+
+systemctl status cron (which shows crons is running and active)
+
+basic format of cronajob
+
+* * * * * /usr/bin/
+
+(min,hour,day(month),month,day(week)
+
+(0-59,   0-23,  1-31,   1-12,  0-6 (0 = Sunday) )
+
+
+crontab guru search in google for help
+
+
+
+
+**************Anacron *********************
+
+Anacron is linux utility that executes scheduled task periodically.
+
+Anacron is suited for systems that do not run 24*7
+
+path cd /etc/anacrontab
+
+cat anacrontab (you will get details like below)
+
+root@LAPTOP-MTU0R4K6:/etc# cat anacrontab
+# /etc/anacrontab: configuration file for anacron
+
+# See anacron(8) and anacrontab(5) for details.
+
+SHELL=/bin/sh
+HOME=/root
+LOGNAME=root
+
+# These replace cron's entries
+1       5       cron.daily      run-parts --report /etc/cron.daily
+7       10      cron.weekly     run-parts --report /etc/cron.weekly
+@monthly        15      cron.monthly    run-parts --report /etc/cron.monthly
+root@LAPTOP-MTU0R4K6:/etc#
+
+
+
+
+**************Ping *************************
+Ping :- packet internet group
+icmp = internet control messages protocol
+(icmp shares packets)
+ 
+check network connectivity 
+check internet connection
+check latency on network
+DNS resolution
+
+
+ping 172.26.21.134
+
+ajinkya@LAPTOP-MTU0R4K6:/etc$ ping www.google.com
+PING www.google.com (142.250.192.4) 56(84) bytes of data.
+64 bytes from bom12s14-in-f4.1e100.net (142.250.192.4): icmp_seq=1 ttl=119 time=9.59 ms
+64 bytes from bom12s14-in-f4.1e100.net (142.250.192.4): icmp_seq=2 ttl=119 time=7.93 ms
+64 bytes from bom12s14-in-f4.1e100.net (142.250.192.4): icmp_seq=3 ttl=119 time=9.55 ms
+64 bytes from bom12s14-in-f4.1e100.net (142.250.192.4): icmp_seq=4 ttl=119 time=14.6 ms
+
+rtt min/avg/max/mdev = 7.930/10.412/14.580/2.497 ms
+(in above details shows the realtime status for connecting)
+
+ping -c 5 www.google.com
+(only send 5 packets)
+
+ping -f (ip)
+(to send packages as fast as possible)
+
+ping -a www.google.com
+(received details in audiable format)
+
+ping localhost
+(it is useful for checking your own connection while connecting to others)
+
+
+
+**************Grep ***********************
+
+Grep :- global regular expression print
+
+grep -i ajinkya linux_study.txt
+(it will find all ajinkya words which consist small or big)
+
+grep -c ajinkya linux_study.txt
+shows count of word. (see below eg)
+
+ajinkya@LAPTOP-MTU0R4K6:~/test$ grep -c ajinkya linux_study.txt
+23
+ajinkya@LAPTOP-MTU0R4K6:~/test$ grep -c -i ajinkya linux_study.txt
+25
+
+grep -n ajinkya linux_study.txt 
+(it shows in which line the word is present)
+
+ajinkya@LAPTOP-MTU0R4K6:~/test$ grep -n Ajinkya linux_study.txt
+232:export VAR="Ajinkya Arunrao Ghorpade"
+242:VAR=Ajinkya Arunrao Ghorpade
+
+
+grep -i ajinkya file1.txt file2.txt file3.txt
+(it shows all grep values in all above given files)
+
+grep file$ users.csv
+(it shows file word where present in file content)
+
+grep ajinkya test/*
+grep -R ajinkya test/
+(it will grep ajinkya value in all files and folders in above 2 command)
+
+echo $?
+(it shows your previous command get successful run or not, if sucessfull run then output will 0, if got fail then it will shows 1)
+
+
+
+
+
+
+
+
+
+
+
+
+**************YAML ***********************
+
+
+YAML :- Aint markup language
+
+config file formats like below
+
+YAML, JSON, XML
+
+Eg.
+
+Students:
+   - name: Aju
+      class: 12th
+	  id: 1111
+	  
+Basic Syntax and rules
+
+	  

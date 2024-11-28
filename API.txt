@@ -1,0 +1,9 @@
+*********API *************
+
+
+Api - Application Programming interface
+
+request --><-- response
+
+responses be like in JSON, XML formats
+

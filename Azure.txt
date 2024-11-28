@@ -1,0 +1,29 @@
+
+
+Azure Devops Services -
+
+Boards
+Repos
+Pipelines
+Test Plan
+Artifacts
+
+
+
+Azure Boards -
+Components-
+work items, Boards, Backlog,Sprints, Dashboards.
+Boards work proces -
+Basic, Agile, Scrum, Capablity maturity model integration
+
+
+
+
+
+Azure Devops Lecture
+
+
+https://www.youtube.com/watch?v=e99QsTsJPJs&list=PLdpzxOOAlwvIcxgCUyBHVOcWs0Krjx9xR&index=4
+
+https://www.youtube.com/@Techlearningworld
+

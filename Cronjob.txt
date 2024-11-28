@@ -1,0 +1,16 @@
+****************Cron Job ***********
+
+schedule task is called as cron job.
+
+systemctl status cron (which shows crons is running and active)
+
+basic format of cronajob
+
+* * * * * /usr/bin/
+
+(min,hour,day(month),month,day(week)
+
+(0-59,   0-23,  1-31,   1-12,  0-6 (0 = Sunday) )
+
+
+crontab guru search in google for help

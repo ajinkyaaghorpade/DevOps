@@ -1,0 +1,52 @@
+*****************Linux Envoirment Variables ***************************
+
+
+They are essentially key-value pairs used by the operating system to pass configuration information to applications.
+
+Types of Environment Variables:
+Global (or System-wide): Accessible from any terminal session and by any process.
+Local: Specific to the terminal session, once session logout your env will be lost.
+
+Common Commands:
+printenv: Lists all global environment variables.
+env: Displays global environment variables.
+set: Shows both global and local environment variables.
+echo $VARIABLE_NAME: Displays the value of a specific environment variable.
+
+Setting Environment Variables:
+You can set a variable temporarily in a session using export VARIABLE_NAME=value.
+To set it permanently, you can add the export command to your shell’s configuration file (e.g., .bashrc or .bash_profile).
+
+
+myval="Aagastya Ghorpade" (temp var added)
+to check this echo $myval
+
+to set this permanant
+
+export myval="Agastya Ghorpade"
+
+now check just run env command or printenv
+
+ajinkya@LAPTOP-MTU0R4K6:~$ env | grep myval
+myval=Aagastya Ghorpade
+
+To set env variables permanently for User the follow below steps
+
+go to /.profile for (ubuntu) or /.bash_profile for (CentOS)
+
+add below variable for an example
+
+# user specific env and startup programms
+export VAR="Ajinkya Arunrao Ghorpade"
+
+after saving the above .profile file just run the below command 
+
+--> source ~/.profile
+
+now it will be permanently saved your variable
+
+
+ajinkya@LAPTOP-MTU0R4K6:~$ env | grep VAR
+VAR=Ajinkya Arunrao Ghorpade
+
+(you will findout the env variable)

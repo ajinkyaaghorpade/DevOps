@@ -1,0 +1,23 @@
+
+What is jenkins and CI/CD?
+Lab Setup & Installation
+Jenkins Dashboard Overview
+Some Basic Jenkins Job
+Sheduling job
+Working with GIT Repo
+Email Notification
+Job for action on Remote server
+Jenkins + AnsiblPlaybook
+Project - Websit Update on Remote Server
+Env Variables
+Jenkins + MAVEN 1
+CI/CD Project (Jenkins PIPELINE)
+Bonus Tips
+
+
+User Name :- Ajinkya
+Pw :- 12345
+Full Name :- Ajinkya Ghorpade
+Mail :- nikhil908070@gmail.com
+
+

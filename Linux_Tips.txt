@@ -1,0 +1,26 @@
+file content will delete file name will safe
+
+> testfile (testfile is the file name)
+
+live log monitor 
+
+tail -f | grep "values'
+
+if your manager give u multiple commands while u working & u want to save those path just run below 2 commands
+
+script command.txt
+ctrl + D 
+
+(in this above command when u working on every commands it will store a data of that commands)
+
+bc - binary calculator
+
+***while running big command & u want to go to 1st line of command or end of the line of command just press below 2 words***
+
+ctrl + a (for start)
+ctrl + e (for end)
+
+ctrl + u (to delete lengthy commands)
+ctrl + y ( to undo lengthy commands)
+
+ctrl + l (clear screen)

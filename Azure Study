@@ -1,0 +1,853 @@
+
+New Git
+
+User Name - ajinkyaaghorpade
+
+ajinkya.ghorpade55@gmail.com
+
+Git pw - Agastya@1122
+
+
+Azure Resource Manager Template - 
+
+When users required to create a VM then they just go to the services like AZure Portal,CLI,Bicep etc. 
+Fill the prerequisites and then it will go to the Azure Resoucre Manager
+After that ARM can create the resources on Azure Platform
+
+ARM Templates - Which is a Azure service which can a part of MS Azure.
+it will help to create a resources in Azure through the JSON format.
+
+User --> ARM template --> ARM (Azure resource manager) --> MS Azure 
+
+Azure UI / Portal  |
+CLI                            |
+ARM Template     |---------------> ARM ----------> Azure
+Bicep                       |
+SDK                          |
+
+
+
+Azure Storage Services -
+
+
+Azure Storage Services is a cloud-based offering from Microsoft Azure that provides scalable, durable, and secure storage solutions for a variety of data types, including files, blobs, queues, and tables, accessible over the internet."
+
+
+
+
+Azure Devops Services -
+
+Azure Boards - (Track Project Management Tool)
+
+progress management tool, status of your project hows it going,
+
+When a team of more than one developer or user collaborates, the Microsoft Azure board service allows users to track software development progress or tasks linked with different people.
+
+Consider it an interface that allows you to track activities, features, and even defects that may be related to your project.
+
+Sub parts of Boards.
+
+Work items,Boards,Backlog,Sprints,Queries.
+
+Azure Boards -
+Components-
+work items, Boards, Backlog,Sprints, Dashboards.
+Boards work proces -
+Basic, Agile, Scrum, CMMI (Capablity maturity model integration)
+
+
+
+Azure Application insights for failure logs -
+
+create insights --> resource group --> instance details (name, region), workspace details. --> review & create 
+
+
+
+
+Repos
+Pipelines
+Test Plan
+Artifacts
+
+
+
+
+
+
+Helm -
+
+Helm is a package manager for kubernetes.
+
+
+Kubernetes -
+
+in k8s there 3 types of services for deployment.
+
+Cluster IP, Load Balancer, Node Port services.
+
+Ingress - API object in k8s
+it exposes the HTTP & HTTPS routes from outside the cluster.
+path based & host based routing.
+LB & SSL Termination
+There were multiple ingress controllers, eg. Ngnix controller, HAProxy ingress
+
+ingress controll select --> ingress resource files --> wrote in yaml file (which containes routing details for that service)
+
+
+
+
+Azure Devops Lecture
+
+
+https://www.youtube.com/watch?v=e99QsTsJPJs&list=PLdpzxOOAlwvIcxgCUyBHVOcWs0Krjx9xR&index=4
+
+https://www.youtube.com/@Techlearningworld
+
+
+https://www.youtube.com/watch?v=10jm7Waan8M&list=PLdpzxOOAlwvIcxgCUyBHVOcWs0Krjx9xR&index=1   -- Azure DevOps Series. (Abhishek VeerMalla)
+
+
+https://www.youtube.com/watch?v=Fcun3XGUnks
+
+
+https://www.youtube.com/@DevOpsPro/videos
+
+
+
+SDLC - software developement lifycycle
+
+Design
+Develope
+Test
+
+
+
+
+
+CI / CD Process
+
+Unit Testing --> Write a code and stores to Github Repos
+Static Code Analysis --> 
+Code Quality Check / Vulnerability
+Automation
+Reports
+Deployment
+
+Dev Commit Code --> GitHub Repo --> Jenkins (Automate with our steps) --> 
+
+Jenkins --> (we write a script and set stages as mentioned below )
+Static Code Analysis (Maven)
+Code Quality Check (Sonar Qube)
+
+
+
+Azure Kubernetes Services
+
+Master Node - Control Plane
+Worker Node - Data Plane
+
+
+3 types creating K8s Clusters.
+
+1 --> On Premises (Through this we can create K8s Clutsers on VM's or physical servers or private cloud like Slack)
+2 --> Azure (Through this we can create K8s Clusters on VM's)
+3 --> Azure K8s Services (Directly we can create the K8s Clusters)
+
+(Both 1 & 2 are self managed K8s clusters)
+3rd is Azure managed K8s clusters.
+
+
+
+
+
+Azure Ci /Cd Process
+
+CI Process -- Dev commit code --> Azure Repos / GitHub --> Pipeline --> (SCA.UT,Build (image), 
+
+
+
+
+Integrating Azure Container Registry (ACR) with Pipelines
+
+"I have already set up an Azure Pipeline integrated with Azure Container Registry. On a daily basis, I only need to run the pipeline, which automatically builds the Docker image and pushes it to the container registry."
+
+
+
+Debugging Pipeline Failures. (Troublrshoot)
+
+
+"When I encounter pipeline failures, I first review the error logs to identify the root cause. Common issues include syntax errors in the YAML file, authentication problems with the container registry, or issues with the Dockerfile. For example, if there's an authentication failure, I check the service connections and credentials to ensure they are correct and up-to-date."
+
+
+Pipeline Failure Notification
+        ↓
+   Check Error Logs
+        ↓
+ Identify Root Cause
+        ↓
+Verify Service Connection
+        ↓
+   Update Credentials
+        ↓
+  Run Pipeline Again
+
+
+
+
+
+
+RBAC - Role based access controll
+
+"Role-Based Access Control (RBAC) in Azure is a system that helps manage who has access to Azure resources and what they can do with those resources. It allows you to assign roles to users, groups, and applications, giving them specific permissions to resources like virtual machines, databases, and storage. This way, you can ensure that only authorized users have the necessary access to perform their tasks.
+
+
+in Jenkins -
+
+Dev - Run/ Write Access
+QA - Read Access
+DevOps - Admin Access
+
+
+
+
+maintaining pipeline security throught the ci/cd process
+
+Source Code Management
+  ├── [INFO] - Repository Access: User 'dev_user' authenticated via SSH key
+  └── [INFO] - Branch Protection: Pull request #42 requires code review before merge
+  
+Build Stage
+  ├── [INFO] - Dependency Scan: No critical vulnerabilities found in project dependencies
+  └── [INFO] - Build Environment: Secure access granted to build agent 'build_agent_01'
+
+Test Stage
+  ├── [INFO] - Static Analysis: Code analysis completed with 0 critical issues
+  └── [INFO] - Test Environment: Isolated environment 'test_env_01' initialized for testing
+
+Deploy Stage
+  ├── [INFO] - Deployment: Initiating deployment to staging environment via encrypted connection
+  └── [INFO] - RBAC: Deployment permissions verified for user 'deploy_user'
+
+Monitoring and Logging
+  ├── [INFO] - Monitoring: No security incidents detected in the last 24 hours
+  └── [INFO] - Audit Log: Deployment audit log generated for review
+
+
+
+
+
+
+
+
+Can you explain the CICD process in your current project ? or Can you talk about any CICD process that you have implemented ?
+
+A: In the current project we use the following tools orchestrated with Jenkins to achieve CICD.
+
+Maven, Sonar, AppScan, ArgoCD, and Kubernetes
+Coming to the implementation, the entire process takes place in 8 steps
+
+
+1. Code Commit: Developers commit code changes to a Git repository hosted on GitHub.
+2. Jenkins Build: Jenkins is triggered to build the code using Maven. Maven builds the code and runs unit tests.
+3. Code Analysis: Sonar is used to perform static code analysis to identify any code quality issues, security vulnerabilities, and bugs.
+4. Security Scan: AppScan is used to perform a security scan on the application to identify any security vulnerabilities.
+5. Deploy to Dev Environment: If the build and scans pass, Jenkins deploys the code to a development environment managed by Kubernetes.
+6. Continuous Deployment: ArgoCD is used to manage continuous deployment. ArgoCD watches the Git repository and automatically deploys new changes to the development environment as soon as they are committed.
+7. Promote to Production: When the code is ready for production, it is manually promoted using ArgoCD to the production environment.
+8. Monitoring: The application is monitored for performance and availability using Kubernetes tools and other monitoring tools.
+
+
+
+
+
+What are the different ways to trigger jenkins pipelines ?
+
+There were different types of triggers of pipelines.
+
+
+Manual Trigger: You can start the pipeline manually through the Jenkins dashboard by clicking on the "Build Now" button.
+
+SCM (Source Code Management) Trigger: Automatically triggers the pipeline when there are changes in the source code repository (like Git).
+
+Schedule Trigger: Uses cron-like syntax to schedule pipeline runs at specific times.
+
+Webhook Trigger: Triggers the pipeline when an event occurs in an external system, like a commit to a GitHub repository.
+
+Upstream/Downstream Trigger: A pipeline can trigger another pipeline as part of a sequence.
+
+
+
+
+
+Azure Devops with Docker, Kuberntes, Ansible and Powershell scripting       
+Must have good experience with DevOps tools like Jenkins, Git, SonarQube, Jfrog Artifactory, Trivy, Docker       
+Should have an experience with Monitoring tools like Grafana, Prometheus, Kibana, Dynatrace.       
+Must have good experience with Kubernetes.       
+Exposure on Kafka and Rabbitmq.     
+Python and Terraform are good to have.
+
+
+Kubernetes --
+
+Understand Namespace  and namespace quotas using policies.
+
+Namespace: In Kubernetes, a Namespace is a way to divide cluster resources between multiple users (via resource quotas). It's like a virtual cluster within a cluster. Each Namespace can have its own set of resources, and they help in organizing and managing a large number of resources more efficiently.
+
+Resource Quotas: Resource Quotas are policies applied to a Namespace that limit the amount of resources (like CPU, memory, storage, etc.) that can be consumed within that Namespace. They help in avoiding resource contention and ensuring fair usage of resources among different teams or projects.
+
+Using Policies:
+
+Define Namespace: Create a Namespace using a YAML file or kubectl command.
+
+Apply Resource Quotas: Define Resource Quota policies in a YAML file and apply them to the Namespace to set limits on resource usage.
+
+
+# Namespace definition
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: my-namespace
+
+# Resource Quota definition
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-resource-quota
+  namespace: my-namespace
+spec:
+  hard:
+    requests.cpu: "4"
+    requests.memory: "8Gi"
+    limits.cpu: "10"
+    limits.memory: "16Gi"
+
+
+
+
+Rolling update strategy & blue green deployment in k8s share me short n simple answer to answer interviewer ?
+
+
+
+Rolling Update Strategy:
+
+Kubernetes’ Rolling Update strategy updates Pods in a Deployment incrementally, one after the other.
+
+Ensures that there's no downtime as the old version of the application is replaced by the new one.
+
+Users still have access to the application during the update.
+
+Blue-Green Deployment:
+
+Blue-Green Deployment is a technique where two environments, “Blue” (current) and “Green” (new), are used.
+
+The Green environment is the new version of the application, while the Blue environment is the old version.
+
+Once the Green environment is tested and verified, traffic is switched from Blue to Green.
+
+Provides a quick rollback to the Blue environment if something goes wrong with the Green environment.
+
+
+
+
+
+Horizontal pod autoscalar k8s share me short n simple answer to answer interviewer ?
+
+Horizontal Pod Autoscaler (HPA):
+
+HPA automatically adjusts the number of Pods in a deployment, replica set, or stateful set based on observed CPU utilization or other select metrics.
+
+Ensures that your application has enough resources to handle the load, and reduces resource usage when the load is low.
+
+Example: If your web application is experiencing high traffic, HPA will increase the number of Pods to handle the load. When the traffic decreases, it will reduce the number of Pods to save resources.
+
+
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: my-app
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-app
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
+
+
+
+
+
+
+Creating servcie accounts on azure and what is the purpose of it share me short n simple answer to answer interviewer ?
+
+
+Creating Service Accounts on Azure:
+
+Sign in to Azure Portal: Use your Azure account to log in.
+
+Navigate to Azure Active Directory: In the left-hand menu, click on "Azure Active Directory."
+
+App Registrations: Click on "App registrations" and then "New registration."
+
+Enter Details: Provide a name for the service account and select the appropriate options.
+
+Register: Click on the "Register" button to create the service account.
+
+Grant Permissions: Assign the necessary permissions to the service account based on its role.
+
+Purpose of Service Accounts:
+
+Authentication: Service accounts are used to authenticate and perform operations on behalf of applications or services.
+
+Automation: They help automate tasks without human intervention.
+
+Security: Service accounts provide a secure way for applications to access Azure resources without using user credentials.
+
+
+
+
+
+Jenkins, Git, SonarQube, Jfrog Artifactory, Trivy, Docker, Kubernetes tell me this tool wise work in short way to answer an interviewer
+
+
+Jenkins:
+
+Purpose: Automates parts of software development (CI/CD).
+
+Use: Set up pipelines to automatically build, test, and deploy code.
+
+Git:
+
+Purpose: Version control system for tracking changes in source code.
+
+Use: Collaborate on code by creating branches, merging changes, and tracking revisions.
+
+SonarQube:
+
+Purpose: Continuous code quality inspection.
+
+Use: Perform static code analysis to detect bugs, vulnerabilities, and code smells.
+
+JFrog Artifactory:
+
+Purpose: Universal repository manager for multiple package formats.
+
+Use: Manage binaries and artifacts from development through to production.
+
+Trivy:
+
+Purpose: Vulnerability scanner for containers and other artifacts.
+
+Use: Scan Docker images, filesystems, and git repositories for vulnerabilities.
+
+Docker:
+
+Purpose: Platform to develop, ship, and run applications inside containers.
+
+Use: Package an application and its dependencies into a container for consistent environments across development, testing, and production.
+
+Kubernetes:
+
+Purpose: Orchestrates containerized applications.
+
+Use: Automate deployment, scaling, and management of containerized applications.
+
+
+
+
+
+Explain me in short to answer an interviewer for azure stages, jobs, steps, and tasks hierarchy
+
+Azure Pipelines Hierarchy:
+
+Stages:
+
+High-level phases of the pipeline, such as build, test, and deploy.
+
+Example: Build, Test, Deploy.
+
+Jobs:
+
+Units of work within a stage, executed by an agent.
+
+Example: Compile code, Run unit tests, Deploy to staging.
+
+Steps:
+
+Individual tasks or actions within a job.
+
+Example: Run a script, Install dependencies.
+
+Tasks:
+
+Specific operations within a step.
+
+Example: Execute a shell command, Copy files.
+
+Hierarchy Example:
+
+Stage: Build
+
+Job: Compile code
+
+Step: Install dependencies
+
+Task: npm install
+
+Step: Compile
+
+Task: npm run build
+
+
+
+manually build a docker images and deploy using github actions tell me simple answer with an eg.
+
+Steps to Manually Build a Docker Image and Deploy Using GitHub Actions:
+
+Dockerfile: Create a Dockerfile with the instructions to build your Docker image.
+
+GitHub Repository: Push your code and Dockerfile to a GitHub repository.
+
+GitHub Actions Workflow: Create a GitHub Actions workflow file to build and deploy the Docker image.
+
+
+
+FROM node:14
+WORKDIR /app
+COPY package.json ./
+RUN npm install
+COPY . .
+CMD ["node", "app.js"]
+
+
+name: Build and Deploy Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        tags: username/repo:latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+CSTEM- common services test env management.
+responsible for dev n maintain automated build,teststing n deployment.
+installing, configuring, admin of csi envs
+orgnising change,build,release
+building configuring & managing non-prod env's.
+daily task assign. accoriding to that we work, after take tickets.
+deploy,cdex,trouble,config,gv change,routing,ruleset,gateway
+
+K8s componentes
+MATSER - Api server, Schedular, ETCD, Control Manager
+WORKER - Kublet,Container,Kube-Proxy,Container Runtime
+ETCD - distributed key vol stored data,including metadata & conf data, it allows node to read & write data
+*Kubectl Basic Module -
+create K8s cluster,Deploy an app, explore,expose,scale up, update
+*Work of MASTER NODE -
+Master Node promotes the node that manages set of worker node
+The nodes are responsible for cluster mgmt, API configure & Manage the resources within collection
+*Kube API server -
+This provides conf data for API, it includes Pods, Services, replication controllers, its frontend of the cluster.
+*Node in K8s - its a smallest fundamental unit of computing hardware it shows the smallest machine in cluster
+*Kubelet - its a service agent theat controls and manage the pods
+*Kubectl - its a cmd line interface it used to run commands
+*Kube Porxy - responsible to redirect traffic to right container
+Helm - Package manager for k8s
+Ingress - API object in k8s, path/host based routing,
+Namespace & Quotas - divide cluster resources between multiple resources. its virtual cluster within a cluster.
+Rolling Update Strategy - Ensures that there's no downtime as the old version of the application is replaced by the new one.
+Once the Green environment is tested and verified, traffic is switched from Blue to Green.
+Provides a quick rollback to the Blue environment if something goes wrong with the Green environment.
+Horizontal Pod Autoscaler (HPA) - automatically adjust the no.of pods, set based cpu utilization on selected metrics.
+ensures that enough resources to handle the load, load high then replica increase, low load then replica low
+kubectl create deployment my-ngnix(POD) --image(DH) = nginx:latest
+
+Azure -
+*Creating Service Accounts on Azure -
+Authentication: Service accounts are used to authenticate and perform operations on behalf of applications or services.
+Automation: They help automate tasks without human intervention.
+Security: Service accounts provide a secure way for applications to access Azure resources without using user credentials.
+*Azure Pipelines Hierarchy - Stages(Build), Jobs(compile code) ,Steps (run command) ,TAsks (npm install),
+*Azure Storage - is a cloud-based storage solution by Microsoft that offers a highly available, durable, and scalable platform for storing and managing data. It supports various types of data, including unstructured data (Blob Storage), files (File Storage), messages (Queue Storage), and structured data (Table Storage)1.
+
+*****DOCKER*******
+*Manually build docker image using github - 
+FROM python:3.2
+WORKDIR /myapp
+RUN pythom3 install
+CMD ['"pythom" "start"]
+--> docker build .
+-->docker image ls
+--> docker run image id
+--> docker stop image id
+-->docker ps -a
+--> docker run -d --rm -p 3000:3000 image id
+-->docker run -d --name -p 3000:3000 image id
+--docker login
+username 
+pass
+docker push aju/myapp:01(tag)
+
+
+
+
+***************************Git / Git Hub****************************************
+git status
+git diff
+git log
+git show (log id:file name)
+eg git show 0a5ade549785442da51b55df4eb3cde5bf6dac5f:index.html
+
+To undo changes, get last successful changes
+if u save any content bymistaklly and want to restore back 
+
+git restore .
+or
+git restore file name
+if we added changes using git add then 
+
+git restore --staged .
+or
+git restore --staged (file name)
+
+then
+git restore .
+or
+git restore filename
+
+* if we update any changes what you want in file and added in staged area, after by mistaklly something u added wrong in file then?
+git restore --worktree .
+
+* if u commited changes in  file and u want to revert it back then ?
+git reset --hard HEAD^
+
+to show last commit changes
+$ git log -p -1 (-p means patch and -1 last 1 commit)
+
+$ git log --stat (only shows in which file changes has done)
+
+commit b075aba9f8e9d7198f50663f41d280cd4cc5380b (HEAD -> master)
+Author: ajinkya111122 <nikhil908070@gmail.com>
+Date:   Sun Aug 4 10:33:20 2024 +0530
+
+    this is version v3
+
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ 
+ 
+ $ git log --pretty=oneline (shows all commits in 1 line, like id and msg)
+ 
+b075aba9f8e9d7198f50663f41d280cd4cc5380b (HEAD -> master) this is version v3
+0a5ade549785442da51b55df4eb3cde5bf6dac5f this is version v2
+4353ca21e1f21a2e687f57dee1332b2dbc20decb new file has added
+
+
+$ git log --pretty=format:"%h -%-an, %ar:%s"  (shows all details in line format)
+(eg. log id, author name, time, msg)
+
+b075aba -ajinkya111122, 24 hours ago:this is version v3
+0a5ade5 -ajinkya111122, 24 hours ago:this is version v2
+4353ca2 -ajinkya111122, 25 hours ago:new file has added
+
+
+ git log -S V3 (it shows any perticular word when it added)
+ 
+commit b075aba9f8e9d7198f50663f41d280cd4cc5380b (HEAD -> master)
+Author: ajinkya111122 <nikhil908070@gmail.com>
+Date:   Sun Aug 4 10:33:20 2024 +0530
+
+    this is version v3
+	
+	
+Useful log  options
+
+git log --grep="fix bugs"
+git log --author="ajinkya"
+
+*********API *************
+
+
+Api - Application Programming interface
+
+request --><-- response
+
+responses be like in JSON, XML formats
+
+
+
+**********Hard Links / Soft Links in Linux *******************
+
+
+Hard Links
+
+Soft Links - link will be removed if original file is deleted or removed
+
+ln -s /home/ajinkya/agastya/newfile/demo trial
+
+(ln stand for link, s stand for soft and then mentioned path of the file, and then trial is the link name)
+
+
+Hard Link - deleting, renaming, or removing the original file will not be affect the link
+
+eg.  ln  /home/ajinkya/agastya/newfile/demo hardlinkfile
+
+(ln stand for link, then mentioned path of the file, and then hardlinkfile is the link name)
+
+once you delete the link in hard link it will be not deleted bcz of every time when we create hard link there will be 2 i node files will create.
+
+
+
+
+**************YAML ***********************
+
+
+YAML :- Aint markup language
+
+config file formats like below
+
+YAML, JSON, XML
+
+Eg.
+
+Students:
+   - name: Aju
+      class: 12th
+	  id: 1111
+	  
+Basic Syntax and rules
+
+	  
+
+
+
+
+
+K8s demon -
+
+
+
+
+
+Job Location : Pune, Bangalore, Indore and Ahmedabad
+
+What you can expect in the role:
+
+Azure Cloud: Strong experience - .Strong Cloud concepts IaaS, PaaS, SaaS with experience in Azure IaC CLI, deployment and configuration of a wide variety of Azure IaaS + PaaS, Network Security Groups, App Gateways
++ WAF, Log Analytics / Insights (including querying), Identity and Access Management, Key Vault Containers: Docker, Dockerfile authoring, container build, security practices, Artifactory (Azure Container Registry, JFrog) Kubernetes: core concepts, cluster management + monitoring + scalling, kubectl, kubernetes manifests, resource types, resource requests / limits, nginx / ingresses, networking, volumes, deployments + helm, Jobs/Cronjobs
+Experience with Kubernetes in Azure (AKS). Azure DevOps (ADO): (Pipelines design, configuration, CI/CD workflow).YAML pipelines authoring + consumption, triggers, integration with code quality tools like Mend, Checkmarx, SonarQube, etc. PowerShell, Bash and Python scripting capabilities. Git + GitHub + integration with ADO Scripting (any of): bash, powershell, python, node JS Ansible Tower (consumption) Agile methodology.
+
+What will help you succeed:
+
+Believe and love what you do.
+Build bridges & open doors.
+Enjoy solving problems.
+Being capable of taking a step back to look at a bigger picture.
+Intermediate or upper English skills.
+Solid Linux/Unix administration skills.
+
+Are you ready?
+
+
+
+
+
+
+***********************************************************************************
+
+What are the Azure Resource, Resources, Azure Resource Manager ?
+
+
+Resoucre *** --> 
+
+User Requirement --> Create a JIRA tkt --> Come to the Devops Team --> Devops Team go to the Azure Portal --> Full fill the all requirements & create VM which is called Resource -->
+
+it will get back to user with requirements which they have asked for --> and Done 
+
+
+Resource Groups *** --> (Grouping of resources which is called resource group)
+
+(eg. VM+DB+APP these are the resource groups)
+
+in this Resource groups provides you below services.
+
+Access, Permissions, Security, Auditing, Cost Management
+
+
+
+
+Azure Portal Services -
+
+The Azure Portal is an online interface provided by Microsoft that allows you to manage and monitor your Azure services and resources. It’s like a control panel where you can create, configure, and oversee various cloud services, including virtual machines, databases, and storage accounts. It’s user-friendly, offering dashboards and tools to help you easily manage your cloud environment. The portal is accessible through a web browser, which means you can manage your resources from anywhere.
+
+
+
+
+
+diffrent types of cloud services can azure provide like iaas paas saas and onprem just give me short n simple brief about it
+Sure! Here's a brief overview of the different types of cloud services that Azure provides:
+
+1. Infrastructure as a Service (IaaS):
+Definition: Provides virtualized computing resources over the internet.
+
+Example: Virtual Machines (VMs), Azure Virtual Network, Azure Load Balancer.
+
+Use Case: Suitable for scenarios where you need control over the underlying infrastructure but want to avoid managing physical hardware.
+
+2. Platform as a Service (PaaS):
+Definition: Provides a platform allowing customers to develop, run, and manage applications without dealing with the underlying infrastructure.
+
+Example: Azure App Service, Azure SQL Database, Azure Functions.
+
+Use Case: Ideal for developers who want to focus on application development and management without worrying about hardware and software maintenance.
+
+3. Software as a Service (SaaS):
+Definition: Provides software applications over the internet on a subscription basis.
+
+Example: Microsoft Office 365, Dynamics 365, Azure DevOps.
+
+Use Case: Great for users who need ready-to-use software applications without managing the underlying infrastructure or platform.
+
+4. On-Premises:
+Definition: Refers to software and services that are installed and run on local hardware and servers within an organization's premises.
+
+Example: Traditional data centers, private cloud setups.
+
+Use Case: Suitable for organizations with specific regulatory requirements or those needing complete control over their data and infrastructure.
+
+I hope this gives you a clear and simple overview of the different types of cloud services Azure provides! If you have any more questions, feel free to ask! 😊☁️
+
